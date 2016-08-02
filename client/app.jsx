@@ -1,17 +1,17 @@
  'use strict';
 
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 
-var App = React.createClass({
-
+class Layout extends React.Component {
   render() {
-    return <h1>Hello, World</h1>;
-  },
+  	const name = "Kristin";
+    return (
+      <h1>Hello REACTNESS, It is {name}</h1>
+    );  
+  }
+};
 
-});
+const app = document.getElementById('app');
 
-render (
-  <App />,
-  document.getElementById('app')
-);
+ReactDOM.render(<Layout/>, app);
